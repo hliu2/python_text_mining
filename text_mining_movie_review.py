@@ -42,20 +42,20 @@ plt.ylabel('features')
 
 #setting max_df and n_gram_range as default, we choose min_df in [1,0.2,0.4,0.6,0.8] seperately, 
 #and store the corresponding Xtrain and Xtest into min_df_data array.
-min_df_data=[(TfidfVectorizer(min_df=i).fit_transform(docs_train).toarray(),TfidfVectorizer(min_df=i).fit(docs_train).transform(docs_test).toarray())
-             for i in [1,2,3,4]]
+min_df_data=[(TfidfVectorizer(min_df=i).fit_transform(docs_train).toarray(),
+TfidfVectorizer(min_df=i).fit(docs_train).transform(docs_test).toarray()) for i in [1,2,3,4]]
              
 
 #setting min_df and n_gram_range as default, we choose max_df in [1,0.2,0.4,0.6,0.8] seperately, 
 #and store the corresponding Xtrain and Xtest into max_df_data array.
-max_df_data=[(TfidfVectorizer(max_df=i).fit_transform(docs_train).toarray(),TfidfVectorizer(max_df=i).fit(docs_train).transform(docs_test).toarray())
-             for i in [0.85,0.90,0.95,1.0]]
+max_df_data=[(TfidfVectorizer(max_df=i).fit_transform(docs_train).toarray(),
+TfidfVectorizer(max_df=i).fit(docs_train).transform(docs_test).toarray()) for i in [0.85,0.90,0.95,1.0]]
              
 
 #setting min_df and max_df as default, we choose ngram_range in [1,0.2,0.4,0.6,0.8] seperately, 
 #and store the corresponding Xtrain and Xtest into ngram_range_data array.
-ngram_range_data=[(TfidfVectorizer(ngram_range=i).fit_transform(docs_train),TfidfVectorizer(ngram_range=i).fit(docs_train).transform(docs_test))
-             for i in [(1,1),(1,2),(1,3)]]
+ngram_range_data=[(TfidfVectorizer(ngram_range=i).fit_transform(docs_train),
+TfidfVectorizer(ngram_range=i).fit(docs_train).transform(docs_test)) for i in [(1,1),(1,2),(1,3)]]
              
 
 # explore parameters in tfidf for both linear SVC and KNN
