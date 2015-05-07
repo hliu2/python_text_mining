@@ -7,5 +7,6 @@ of test set.
 TfidfVectorizer
 * Tried PCA and Factor Analysis to separate negative and positive reviews in a two dimensional plot for visualization  
 * Technologies used: Numpy, Pandas, Matplotlib, Scikit-learn
+
 ## Data Source
 * movie reviews from the v2.0 polarity dataset comes from the http://www.cs.cornell.edu/people/pabo/movie-review-data
